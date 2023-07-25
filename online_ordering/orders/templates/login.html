@@ -1,0 +1,57 @@
+{% extends "base_generic.html" %}
+{% load static %}
+{% block content %}
+        <!-- Login Reg start -->
+   <section class="login-reg">
+    <div class="overlay pt-120">
+        <div class="container">
+            <div class="row align-items-center justify-content-center">
+                
+                <div class="col-xl-5">
+                    <div class="section-text text-center">
+                        <h5 class="sub-title">Bienvenue sur ....</h5>
+                        <h2 class="title">Connectez vous</h2>
+                        <p class="dont-acc">Vous n'avez pas de compte? <a href="{% url 'register' %}">Sign Up</a></p>
+                        <!-- <div class="reg-google">
+                            <a href="javascript:void(0)"><i class="fab fa-google"></i>Sign up with Google</a>
+                        </div>
+                        <span class="or">Or Continue With</span> -->
+                    </div>
+                        <div class="row">
+                            <div class="col-12">
+                               <form method="post">
+                                  {% csrf_token %}
+                                  {{ form.as_p }}
+                                 <button class="cmn-btn w-100" type="submit">Connexion</button>
+                               </form>
+                             
+                                
+                            </div>
+            <!--          {% if messages %}
+                        {% for message in messages %}
+                            <strong>{{ message }}</strong>
+                        {% endfor %}
+                    {% endif %}
+                        
+                    <form method="POST">
+                        {% csrf_token %}
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="single-input">
+                                    <input type="text" required name="email" id="logemail" placeholder="Enter Your Email">
+                                </div>
+                                <div class="single-input">
+                                    <input type="password" required name="password" id="logemail" placeholder="Enter Your Password">
+                                </div>
+                                <button class="cmn-btn w-100" type="submit">Login</button>
+                            </div>
+                        </div>
+                    </form>-->
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Login Reg end -->
+{% endblock %}

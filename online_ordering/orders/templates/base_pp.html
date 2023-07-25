@@ -1,0 +1,148 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paylio - Money Transfer and Online Payments profile HTML Template</title>
+
+    <link rel="shortcut icon" href="{% static 'assets11/images/fav.png' %}" type="image/x-icon">
+    <link rel="stylesheet" href="{% static 'assets1/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/fontawesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/jquery-ui.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/plugin/apexcharts.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/plugin/nice-select.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/arafat-font.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/plugin/animate.css' %}">
+    <link rel="stylesheet" href="{% static 'assets1/css/style.css' %}">
+</head>
+
+<body>
+    <!-- start preloader -->
+    <!-- <div class="preloader" id="preloader"></div> -->
+    <!-- end preloader -->
+    <!-- header-section start -->
+    <header class="header-section body-collapse">
+        <div class="overlay">
+            <div class="container-fruid">
+                <div class="row d-flex header-area">
+                    <div class="navbar-area d-flex align-items-center justify-content-between">
+                        <div class="sidebar-icon">
+                            <img src="{% static 'assets1/images/icon/menu.png' %}" alt="icon">
+                        </div>
+                        <form method="POST" class="flex-fill">
+                            
+                            <div class="form-group d-flex align-items-center">
+                                <img src="{% static 'assets1/images/icon/search.png' %}" alt="icon">
+                                <input type="text" placeholder="Type to search...">
+                            </div>
+                        </form>
+                        <div class="profile-nav">
+                            <div class="single-item language-area">
+                                <div class="language-btn">
+                                    <img src="{% static 'assets1/images/icon/lang.png' %}" alt="icon">
+                                </div>
+                                <ul class="main-area language-content">
+                                    <li>English</li>
+                                    <li>Hindi</li>
+                                    <li class="active">English (US)</li>
+                                    <li>Japanese</li>
+                                    <li>Kannada</li>
+                                    <li>Lithuanian</li>
+                                </ul>
+                            </div>
+                            <div class="single-item notifications-area">
+                                <div class="notifications-btn">
+                                    <img src="{% static 'assets1/images/icon/bell.png' %}" class="bell-icon" alt="icon">
+                                </div>
+                        
+                            </div>
+                            <div class="single-item user-area">
+                                <div class="profile-area d-flex align-items-center">
+                                    <span class="user-profile">
+                                       
+                                    </span>
+                                    <i class="fa-solid fa-sort-down"></i>
+                                </div>
+                                <div class="main-area user-content">
+                                    <div class="head-area d-flex align-items-center">
+                                        <div class="profile-head">
+                                          
+                                            
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                        <div class="close-btn">
+                            <i class="fa-solid fa-xmark"></i>
+                        </div>
+                        <div class="sidebar-logo">
+                            <a href="{% url 'profile' %}"><img src="{% static 'assets1/images/logo.png' %}" alt="logo"></a>
+                        </div>
+                        <ul>
+                            <li>
+                                <a href="{% url 'profile' %}">
+                                    <img src="{% static 'assets1/images/icon/profile.png' %}" alt="profile"> <span>profile</span>
+                                </a>
+                            </li>
+                   
+                        </ul>
+                        <ul class="bottom-item">
+                            <li class="active">
+                                <a href="#">
+                                    <img src="{% static 'assets1/images/icon/ .png' %}" alt=" "> <span> </span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="{% static 'assets1/images/icon/support.png' %}" alt="Support"> <span>Support</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="{% static 'assets1/images/icon/quit.png' %}" alt="Quit"> <span>Quit</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="pt-120">
+                            <div class="invite-now">
+                                <div class="img-area">
+                                    <img src="{% static 'assets1/images/invite-now-illus.png' %}" alt="Image">
+                                </div>
+                                <p>Invite your friend and get $25</p>
+                                <a href="javascript:void(0)" class="cmn-btn">Invite Now</a>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+    <!-- header-section end -->
+
+
+{% block content %}
+  
+{% endblock content %}
+
+    
+    <!--==================================================================-->
+    <script src="{% static 'assets1/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets1/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets1/js/jquery-ui.js' %}"></script>
+    <script src="{% static 'assets1/js/plugin/apexcharts.js' %}"></script>
+    <script src="{% static 'assets1/js/plugin/jquery.nice-select.min.js' %}"></script>
+    <script src="{% static 'assets1/js/plugin/waypoint.min.js' %}"></script>
+    <script src="{% static 'assets1/js/plugin/wow.min.js' %}"></script>
+    <script src="{% static 'assets1/js/plugin/plugin.js' %}"></script>
+    <script src="{% static 'assets1/js/main.js' %}"></script>
+</body>
+
+</html>

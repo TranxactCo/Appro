@@ -1,0 +1,35 @@
+{% extends 'base_generic.html' %}
+
+{% block content %}
+
+    <section class="banner-section index">
+        <div class="overlay">
+            
+            <div class="banner-content">
+                <div class="container wow fadeInUp">
+                    <div class="content-shape">
+                    </div>
+                    <div class="row justify-content-between align-items-center">
+                        <div class="col-lg-9 col-md-6">
+                            <div class="main-content">
+                                <div class="top-area section-text">
+                                    <h5 class="sub-title">La confiance de plus de 3 millions de clients</h5>
+                                    <h1 class="title">Bienvenue sur notre plateforme de commande en ligne !</h1>
+                                    <p class="xlr">Rapide et facile </p>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="col-xxl-4 col-xl-5 col-md-6">                
+                           <div class="bottom-area d-xxl-flex">                               
+                                <a class="cmn-btn" href="{% url 'order_create' %}">Passer une commande en mode guest</a>
+                           </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Banner Section end -->
+
+{% endblock %}

@@ -1,0 +1,9 @@
+<form method="POST">
+    {% csrf_token %}
+    <select name="product_id">
+        {% for product in products %}
+            <option value="{{ order.id }}">{{ order.name }}</option>
+        {% endfor %}
+    </select>
+
+</form>
