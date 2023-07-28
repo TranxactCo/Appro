@@ -26,9 +26,21 @@
                                 <div class="mb-3">
                                 <form method="post">{% csrf_token %}
                                     <div class="mb-3">
-                                        <label class="form-label" for="username">Nom d'utilisateur/Email/numéro de téléphone</label>
+                                        <label class="form-label" for="username">Nom d'utilisateur/numéro de téléphone</label>
                                         <div class="position-relative input-custom-icon">                                               
                                              {{form.username|attr:"class:form-control"  }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="date_of_birth">Date de naissance</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.date_of_birth|attr:"class:form-control"  }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="code">Code promo</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.promo_code|attr:"class:form-control"  }}  
                                           </div>                                                
                                     </div>
                                     <div class="mb-3">

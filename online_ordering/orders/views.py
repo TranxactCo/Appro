@@ -7,17 +7,20 @@ from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, OrderForm
 from django.contrib.auth.models import User
+from .models import UserProfile
+from .forms import UserRegistrationForm
 
 def register_view(request):
     if request.method == 'POST':
-        form = UserCreationForm(request.POST)
+        form = UserRegistrationForm(request.POST)
         if form.is_valid():
-            form.save()
-            username = form.cleaned_data.get('username')
-            messages.success(request, f'Account created for {username}!')
+            user = form.save()
+           
+            UserProfile.objects.create(user=user, date_of_birth=form.cleaned_data['date_of_birth'], promo_code=form.cleaned_data['promo_code'])
+            
             return redirect('login')
     else:
-        form = UserCreationForm()
+        form = UserRegistrationForm()
     return render(request, 'register.html', {'form': form})
 
 @login_required

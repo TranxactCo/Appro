@@ -2,6 +2,9 @@
 from django import forms
 from .models import Order
 from .models import Contact
+from django.contrib.auth.forms import UserCreationForm
+from .models import UserProfile
+from django.contrib.auth.models import User
 
 #class OrderForm(forms.ModelForm):
   #  class Meta:
@@ -39,3 +42,11 @@ class ContactForm(forms.ModelForm):
     class Meta:
         model = Contact
         fields = ['name', 'subject', 'message']  # update this with your actual fields
+        
+class UserRegistrationForm(UserCreationForm):
+    date_of_birth = forms.DateField(widget=forms.DateInput(attrs={'class': 'form-control'}))
+    promo_code = forms.CharField(max_length=20, required=False, widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+    class Meta:
+        model = User
+        fields = ['username', 'date_of_birth', 'promo_code', 'password1', 'password2']
