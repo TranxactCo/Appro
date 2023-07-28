@@ -11,6 +11,7 @@ urlpatterns = [
     path('order-history/', views.order_history_view, name='order-history'),
     path('order-tracking/<int:order_id>/', views.order_tracking_view, name='order-tracking'),
     path('contact-support/', views.contact_support_view, name='contact-support'),
+    path('contact/', views.contact_view, name='contact'),
     path('order-create/', views.order_create, name='order_create'),  # this one should be 'order_create'
     path('order-confirmation/<int:order_id>/', order_confirmation, name='order_confirmation'),
     path('order-success/', views.order_success_view, name='order_success'),

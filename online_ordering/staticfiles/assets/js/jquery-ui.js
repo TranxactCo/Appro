@@ -7203,7 +7203,7 @@
             options: {
                 text: true,
                 icons: {
-                    primary: null,
+                    danger: null,
                     secondary: null
                 }
             },
@@ -7215,16 +7215,16 @@
                 if (!this.options.showLabel && this.options.text) {
                     this.options.text = this.options.showLabel;
                 }
-                if (!this.options.icon && (this.options.icons.primary ||
+                if (!this.options.icon && (this.options.icons.danger ||
                         this.options.icons.secondary)) {
-                    if (this.options.icons.primary) {
-                        this.options.icon = this.options.icons.primary;
+                    if (this.options.icons.danger) {
+                        this.options.icon = this.options.icons.danger;
                     } else {
                         this.options.icon = this.options.icons.secondary;
                         this.options.iconPosition = "end";
                     }
                 } else if (this.options.icon) {
-                    this.options.icons.primary = this.options.icon;
+                    this.options.icons.danger = this.options.icon;
                 }
                 this._super();
             },
@@ -7238,11 +7238,11 @@
                     this.options.text = value;
                 }
                 if (key === "icon") {
-                    this.options.icons.primary = value;
+                    this.options.icons.danger = value;
                 }
                 if (key === "icons") {
-                    if (value.primary) {
-                        this._super("icon", value.primary);
+                    if (value.danger) {
+                        this._super("icon", value.danger);
                         this._super("iconPosition", "beginning");
                     } else if (value.secondary) {
                         this._super("icon", value.secondary);
@@ -9217,7 +9217,7 @@
                 controls = $("<button>")
                     .attr({
                         type: "button",
-                        "class": "ui-datepicker-close ui-state-default ui-priority-primary ui-corner-all",
+                        "class": "ui-datepicker-close ui-state-default ui-priority-danger ui-corner-all",
                         "data-handler": "hide",
                         "data-event": "click"
                     })

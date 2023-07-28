@@ -5,10 +5,10 @@
 /* VARIABLE DEFINITIONS */
 html[data-theme="light"],
 :root {
-    --primary: #79aec8;
+    --danger: #79aec8;
     --secondary: #417690;
     --accent: #f5dd5d;
-    --primary-fg: #fff;
+    --danger-fg: #fff;
 
     --body-fg: #333;
     --body-bg: #fff;
@@ -18,11 +18,11 @@ html[data-theme="light"],
     --header-color: #ffc;
     --header-branding-color: var(--accent);
     --header-bg: var(--secondary);
-    --header-link-color: var(--primary-fg);
+    --header-link-color: var(--danger-fg);
 
     --breadcrumbs-fg: #c4dce8;
     --breadcrumbs-link-fg: var(--body-bg);
-    --breadcrumbs-bg: var(--primary);
+    --breadcrumbs-bg: var(--danger);
 
     --link-fg: #417893;
     --link-hover-color: #036;
@@ -42,7 +42,7 @@ html[data-theme="light"],
     --selected-row: #ffc;
 
     --button-fg: #fff;
-    --button-bg: var(--primary);
+    --button-bg: var(--danger);
     --button-hover-bg: #609ab6;
     --default-button-bg: var(--secondary);
     --default-button-hover-bg: #205067;
@@ -55,7 +55,7 @@ html[data-theme="light"],
     --object-tools-bg: var(--close-button-bg);
     --object-tools-hover-bg: var(--close-button-hover-bg);
 
-    --font-family-primary:
+    --font-family-danger:
         -apple-system,
         BlinkMacSystemFont,
         "Segoe UI",
@@ -96,7 +96,7 @@ body {
     margin: 0;
     padding: 0;
     font-size: 0.875rem;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-danger);
     color: var(--body-fg);
     background: var(--body-bg);
 }
@@ -472,7 +472,7 @@ input, textarea, select, .form-row p, form .button {
     margin: 2px 0;
     padding: 2px 3px;
     vertical-align: middle;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-danger);
     font-weight: normal;
     font-size: 0.8125rem;
 }
@@ -586,7 +586,7 @@ input[type=button][disabled].default {
     font-weight: 400;
     font-size: 0.8125rem;
     text-align: left;
-    background: var(--primary);
+    background: var(--danger);
     color: var(--header-link-color);
 }
 
@@ -967,7 +967,7 @@ a.deletelink:focus, a.deletelink:hover {
     background: none;
     border: 0;
     cursor: pointer;
-    font-family: var(--font-family-primary);
+    font-family: var(--font-family-danger);
 }
 
 #user-tools {

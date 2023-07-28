@@ -1,7 +1,212 @@
-{% extends "base_generic.html" %}
+{% extends "base_pp.html" %}
 {% load static %}
-{% block content %}
-<!-- Login Re start -->
 
-  <!-- Login Reg end -->
+{% block content %}
+
+  <div class="page-content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xl-12">
+          <div class="row">
+              <div class="col-xl-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <div>
+                              <div class="d-flex align-items-center">
+                                  <div class="avatar">
+                                      <div class="avatar-title rounded bg-soft-danger">
+                                          <i class="bx bx-check-shield font-size-24 mb-0 text-danger"></i>
+                                      </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6 class="mb-0 font-size-15">Commandes</h6>
+                                  </div>
+                              </div>
+
+                              <div>
+                                  <h4 class="mt-4 pt-1 mb-0 font-size-22">{{ total_orders }}<span class="text-success fw-medium font-size-13 align-middle"> <i class="mdi mdi-arrow-up"></i>  </span> </h4>
+                                  <div class="d-flex mt-1 align-items-end overflow-hidden">
+                                      <div class="flex-grow-1">
+                                          <p class="text-muted mb-0 text-truncate">Total de vos commandes</p>
+                                      </div>
+                                      <div class="flex-shrink-0">
+                                          <div id="mini-1" data-colors='["#1f58c7"]' class="apex-charts"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+              <div class="col-xl-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <div>
+                              <div class="d-flex align-items-center">
+                                  <div class="avatar">
+                                      <div class="avatar-title rounded bg-soft-danger">
+                                          <i class="bx bx-cart-alt font-size-24 mb-0 text-danger"></i>
+                                      </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6 class="mb-0 font-size-15">Produits</h6>
+                                  </div>
+                              </div>
+                             
+                              <div>
+                                  <h4 class="mt-4 pt-1 mb-0 font-size-22">{{ order1 }} <span class="text-success fw-medium font-size-13 align-middle"> <i class="mdi mdi-arrow-up"></i></span> </h4>
+                                  <div class="d-flex mt-1 align-items-end overflow-hidden">
+                                      <div class="flex-grow-1">
+                                          <p class="text-muted mb-0 text-truncate">Total des produits commandés</p>
+                                      </div>
+                                      <div class="flex-shrink-0">
+                                          <div id="mini-2" data-colors='["#1f58c7"]' class="apex-charts"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-xl-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <div>
+                              <div class="d-flex align-items-center">
+                                  <div class="avatar">
+                                      <div class="avatar-title rounded bg-soft-danger">
+                                          <i class="bx bx-package font-size-24 mb-0 text-danger"></i>
+                                      </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6 class="mb-0 font-size-15">Normale</h6>
+                                  </div>
+
+                                 
+                              </div>
+
+                              <div>
+                                  <h4 class="mt-4 pt-1 mb-0 font-size-22">{{ normal_order_count }} <span class="text-success fw-medium font-size-13 align-middle"> <i class="mdi mdi-arrow-up"></i> </span> </h4>
+                                  <div class="d-flex mt-1 align-items-end overflow-hidden">
+                                      <div class="flex-grow-1">
+                                          <p class="text-muted mb-0 text-truncate">Total des commandes normales</p>
+                                      </div>
+                                      <div class="flex-shrink-0">
+                                          <div id="mini-3" data-colors='["#1f58c7"]' class="apex-charts"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="col-xl-6">
+                  <div class="card">
+                      <div class="card-body">
+                          <div>
+                              <div class="d-flex align-items-center">
+                                  <div class="avatar">
+                                      <div class="avatar-title rounded bg-soft-danger">
+                                          <i class="bx bx-rocket font-size-24 mb-0 text-danger"></i>
+                                      </div>
+                                  </div>
+
+                                  <div class="flex-grow-1 ms-3">
+                                      <h6 class="mb-0 font-size-15">Express</h6>
+                                  </div>
+
+                              </div>
+
+                              <div>
+                                  <h4 class="mt-4 pt-1 mb-0 font-size-22">{{ express_order_count }}<span class="text-success fw-medium font-size-13 align-middle"> <i class="mdi mdi-arrow-up"></i> </span> </h4>
+                                  <div class="d-flex mt-1 align-items-end overflow-hidden">
+                                      <div class="flex-grow-1">
+                                          <p class="text-muted mb-0 text-truncate">Total des commandes express</p>
+                                      </div>
+                                      <div class="flex-shrink-0">
+                                          <div id="mini-4" data-colors='["#1f58c7"]' class="apex-charts"></div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="card-title mb-0">Historique de vos commandes</h4>
+                    </div><!-- end card header -->
+                    <div class="card-body">
+                     
+                        <div class="gridjs-wrapper" style="height: auto;">
+                            <table role="grid" class="gridjs-table" style="height: auto;">
+                                <thead  class="gridjs-thead">
+                                    <tr class="gridjs-tr">                         
+                                        <th data-column-id="date" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Date</div>
+                                        </th>
+                                        <th data-column-id="name" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Nom</div>
+                                        </th>
+                                        <th data-column-id="name_order" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Nom du produit</div>
+                                        </th>
+                                        <th data-column-id="number" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Numéro de téléphone</div>
+                                        </th>
+                                        <th data-column-id="type_order" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Type de commande</div>
+                                        </th>
+                                        <th data-column-id="quantity" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Quantité</div>
+                                        </th>
+                                        <th data-column-id="status" class="gridjs-th" style="min-width: 86px; width: 124px;">
+                                            <div class="gridjs-th-content">Statut de la commande</div>
+                                        </th>
+                                                                                    
+                                    </tr>
+                                </thead>
+                                <tbody class="gridjs-tbody">
+                                    {% for order in orders|slice:":5" %}
+                                        <tr>
+                                            <td data-column-id="num">{{ order.created_at }}</td>
+                                            <td data-column-id="name" class="gridjs-td">{{ order.username }}</td>
+                                            <td data-column-id="name_order" class="gridjs-td">{{ order.product_name }}</td>
+                                            <td data-column-id="number" class="gridjs-td">{{ order.contact }}</td>
+                                            <td data-column-id="type_order" class="gridjs-td">{{ order.type_order }}</td>
+                                            <td data-column-id="quantity" class="gridjs-td">{{ order.quantity }}</td>
+                                            <td data-column-id="status" class="gridjs-td">{{ order.status }}</td>
+                                            
+
+                                        </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                    <!-- end card body -->
+                </div>
+                <!-- end card -->
+            </div>
+            <!-- end col -->
+        </div>
+     </div>
+   </div>
+  </div>
+
 {% endblock %}

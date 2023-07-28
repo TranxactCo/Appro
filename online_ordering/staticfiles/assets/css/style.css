@@ -23,10 +23,10 @@
 :root {
     --body-font: "Jost", sans-serif;
     --body-color: #FFFFFF;
-    --primary-color: #e5322c;
+    --danger-color: #e5322c;
     --secondary-color: #00FE83;
     --head-color: #0c266c;
-    --section-primary-color: #f2f3f9;
+    --section-danger-color: #f2f3f9;
     --section-color: #f5f6fc;
     --para-color: #0c266c;
     --border-color: #868ea5;
@@ -314,7 +314,7 @@ label {
 }
 
 .sub-title {
-    color: var(--primary-color);
+    color: var(--danger-color);
     margin-bottom: 30px;
 }
 
@@ -443,7 +443,7 @@ label {
     right: 30px;
     width: 45px;
     height: 45px;
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     border-radius: 5px;
     color: #fff;
     line-height: 45px;
@@ -565,7 +565,7 @@ label {
 }
 
 .cmn-btn.active:hover {
-    background: var(--primary-color);
+    background: var(--danger-color);
     color: var(--bs-white);
 }
 
@@ -681,13 +681,13 @@ label {
 
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .nav-link:hover,
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-item:hover {
-    color: var(--primary-color);
+    color: var(--danger-color);
     transition: 0.3s;
 }
 
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .nav-link.active,
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .dropdown-item.active {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .header-section .navbar .navbar-collapse .navbar-nav .nav-item .nav-link.dropdown-toggle {
@@ -888,7 +888,7 @@ label {
 }
 
 .banner-section .overlay .banner-content .send-money .calculation .highlight {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .banner-section .overlay .banner-content .send-money .calculation .head-area img {
@@ -1282,7 +1282,7 @@ label {
 
 .banner-section.about-us .stars-info .single-box .icon-box {
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     width: 120px;
     height: 120px;
     margin: auto;
@@ -1367,7 +1367,7 @@ label {
     background-image: url(../images/footer-bg-left.png), url(../images/footer-bg-right.png);
     background-repeat: no-repeat;
     background-position: left 20px center, right bottom;
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
 }
 
 .footer-section .newsletter form {
@@ -1392,7 +1392,7 @@ label {
     min-width: 50px;
     min-height: 50px;
     border-radius: 50%;
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
 }
 
 .footer-section .footer-area .menu-item li {
@@ -1571,7 +1571,7 @@ label {
 }
 
 .how-it-works.second .single-item h3 {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     border-radius: 5px;
     min-width: 90px;
     min-height: 90px;
@@ -1702,7 +1702,7 @@ label {
 }
 
 .testimonials .single-slide .single-content .profile-area p {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .faqs-section .cus-mar {
@@ -1936,7 +1936,7 @@ label {
 }
 
 .call-action.security .main-content {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     border-radius: 10px;
     background-image: url(../images/security-call-action.png);
     background-repeat: no-repeat;
@@ -2054,7 +2054,7 @@ label {
 }
 
 .partner-perks .single-box .head-area p {
-    color: var(--primary-color);
+    color: var(--danger-color);
     margin-top: 5px;
     font-weight: 600;
 }
@@ -2103,7 +2103,7 @@ label {
 }
 
 .pricing-plan .nav-tabs-area .nav-tabs li .cmn-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     color: var(--bs-white);
 }
 
@@ -2228,7 +2228,7 @@ label {
 }
 
 .our-team .single-box .designation {
-    color: var(--primary-color);
+    color: var(--danger-color);
     font-weight: 600;
 }
 
@@ -2287,7 +2287,7 @@ label {
 
 .location .single-box a {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--danger-color);
     margin-top: 20px;
 }
 
@@ -2308,7 +2308,7 @@ label {
 }
 
 .current-openings .section-header p a {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .current-openings .nav-tabs {
@@ -2328,7 +2328,7 @@ label {
 }
 
 .current-openings .nav-tabs li .cmn-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     color: var(--bs-white);
 }
 
@@ -2350,7 +2350,7 @@ label {
 }
 
 .current-openings .single-box:hover {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
 }
 
 .current-openings .single-box:hover li,
@@ -2378,7 +2378,7 @@ label {
 
 .current-openings .single-box .salary-limit p {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .current-openings .single-box .right-box a {
@@ -2424,7 +2424,7 @@ label {
 }
 
 .job-details .left-area a:hover {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .job-details .left-area a:hover::after {
@@ -2473,7 +2473,7 @@ label {
 }
 
 .help-center-section .nav-tabs-area .nav-tabs li .cmn-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     color: var(--bs-white);
 }
 
@@ -2552,7 +2552,7 @@ label {
 }
 
 .help-category .nav-tabs button:hover {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .help-category .nav-tabs button:hover::after {
@@ -2561,7 +2561,7 @@ label {
 }
 
 .help-category .nav-tabs button.active {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .help-category .nav-tabs button.active::after {
@@ -2594,7 +2594,7 @@ label {
 }
 
 .blog-section .nav-tabs .cmn-btn.active {
-    background-color: var(--primary-color);
+    background-color: var(--danger-color);
     color: var(--bs-white);
 }
 
@@ -2651,7 +2651,7 @@ label {
 
 .blog-section .single-post .blog-text .bottom-area a {
     font-weight: 600;
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .blog-section .single-post .blog-text .bottom-area a img {
@@ -2715,7 +2715,7 @@ label {
 }
 
 .blog-details-section .authors-area .left-area h6 {
-    color: var(--primary-color);
+    color: var(--danger-color);
     margin-bottom: 30px;
 }
 
@@ -2737,7 +2737,7 @@ label {
 }
 
 .login-reg .dont-acc a {
-    color: var(--primary-color);
+    color: var(--danger-color);
 }
 
 .login-reg .reg-google {

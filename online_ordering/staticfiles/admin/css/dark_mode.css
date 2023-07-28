@@ -1,7 +1,7 @@
 @media (prefers-color-scheme: dark) {
     :root {
-      --primary: #264b5d;
-      --primary-fg: #f7f7f7;
+      --danger: #264b5d;
+      --danger-fg: #f7f7f7;
   
       --body-fg: #eeeeee;
       --body-bg: #121212;
@@ -9,7 +9,7 @@
       --body-loud-color: #ffffff;
   
       --breadcrumbs-link-fg: #e0e0e0;
-      --breadcrumbs-bg: var(--primary);
+      --breadcrumbs-bg: var(--danger);
   
       --link-fg: #81d4fa;
       --link-hover-color: #4ac1f7;
@@ -34,8 +34,8 @@
 
 
 html[data-theme="dark"] {
-    --primary: #264b5d;
-    --primary-fg: #f7f7f7;
+    --danger: #264b5d;
+    --danger-fg: #f7f7f7;
 
     --body-fg: #eeeeee;
     --body-bg: #121212;
@@ -43,7 +43,7 @@ html[data-theme="dark"] {
     --body-loud-color: #ffffff;
 
     --breadcrumbs-link-fg: #e0e0e0;
-    --breadcrumbs-bg: var(--primary);
+    --breadcrumbs-bg: var(--danger);
 
     --link-fg: #81d4fa;
     --link-hover-color: #4ac1f7;

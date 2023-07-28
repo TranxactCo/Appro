@@ -2135,7 +2135,7 @@ S2.define('select2/selection/search',[
   /**
    * This method will transfer the tabindex attribute from the rendered
    * selection to the search box. This allows for the search box to be used as
-   * the primary focus instead of the selection container.
+   * the danger focus instead of the selection container.
    *
    * @private
    */

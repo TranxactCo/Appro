@@ -6,7 +6,7 @@ from .models import Product, Order, Contact
 from django.core.mail import send_mail
 from django.contrib import messages
 from .forms import ContactForm, OrderForm
-
+from django.contrib.auth.models import User
 
 def register_view(request):
     if request.method == 'POST':
@@ -42,6 +42,17 @@ def contact_support_view(request):
         form = ContactForm()
     return render(request, 'contact_support.html', {'form': form})
 
+def contact_view(request):
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Your message has been sent. Our team will get back to you soon.')
+            return redirect('home')  # or where you want to redirect the user after a successful form submission
+    else:
+        form = ContactForm()
+    return render(request, 'contact.html', {'form': form})
+
 def order_create(request):
     if request.method == 'POST':
         form = OrderForm(request.POST)
@@ -52,7 +63,7 @@ def order_create(request):
                 order = form.save(commit=False)
                 order.user = request.user
                 order.save()
-                return redirect('order_success')
+                return redirect('order-history')
             else:
                 # Handle guest user
                 # Retrieve guest order count from session or initialize to 0
@@ -84,7 +95,26 @@ def order_success_view(request):
 
 @login_required
 def dashboard(request):
-    return render(request, 'accounts/profile.html')
+    users = User.objects.all()
+    orders = Order.objects.filter(user=request.user)
+    # Calculate the total quantity
+    order1 = sum(order.quantity for order in orders)
+    # Pass the data to the template context
+    total_orders = orders.count()
+    normal_order_count = orders.filter(type_order='Normal').count()
+    express_order_count = orders.filter(type_order='Express').count()
+    
+    context = {
+        'orders': orders,
+        'order1': order1,
+        'users': users,
+        'total_orders': total_orders,
+        'normal_order_count': normal_order_count,
+        'express_order_count': express_order_count,
+    }
+
+    return render(request, 'accounts/profile.html',context)
+   
 
 def home(request):
     return render(request, 'home.html')

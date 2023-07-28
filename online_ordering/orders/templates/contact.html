@@ -1,7 +1,49 @@
-<form method="POST">
-    {% csrf_token %}
-    <input type="text" name="name" placeholder="Your name">
-    <input type="text" name="subject" placeholder="Subject">
-    <textarea name="description" placeholder="Description"></textarea>
-    <button type="submit">Submit</button>
-</form>
+{% extends "base_pp.html" %}
+{% load static %}
+{% load widget_tweaks %}
+{% block content %}
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">       
+            <div class="card col-md-8 col-lg-6 col-xl-8 ">
+                <div class="card-body p-4"> 
+                    <div class="text-center mt-2">
+                        <h5>Contact Support</h5>
+                    </div>
+                    <div class="p-2 mt-4"> 
+                                                      
+                        <form method="post">{% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Nom</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.name class='form-control' %}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="subject">Object</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.subject class='form-control' %}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Message</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.message class='form-control' %}
+                                </div>
+                            </div>
+                            <button  class="btn btn-danger w-50 waves-effect waves-light" type="submit">Send</button>                           
+                        </form> 
+                                
+                                          
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- container-fluid -->
+</div>
+{% endblock %}

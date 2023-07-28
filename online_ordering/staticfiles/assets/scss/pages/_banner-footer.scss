@@ -43,11 +43,11 @@
                         color: var(--para-color);
                         transition: 0.3s;
                         &:hover {
-                            color: var(--primary-color);
+                            color: var(--danger-color);
                             transition: 0.3s;
                         }
                         &.active {
-                            color: var(--primary-color);
+                            color: var(--danger-color);
                         }
                     }
                     .nav-link.dropdown-toggle {
@@ -247,7 +247,7 @@
                 .calculation {
                     padding: 30px 10px;
                     .highlight {
-                        color: var(--primary-color);
+                        color: var(--danger-color);
                     }
                     .head-area {
                         img {
@@ -622,7 +622,7 @@
                 text-align: center;
                 .icon-box {
                     border-radius: 50%;
-                    background-color: var(--primary-color);
+                    background-color: var(--danger-color);
                     width: 120px;
                     height: 120px;
                     margin: auto;
@@ -707,7 +707,7 @@
         background-image: url(../images/footer-bg-left.png), url(../images/footer-bg-right.png);
         background-repeat: no-repeat;
         background-position: left 20px center, right bottom;
-        background-color: var(--primary-color);
+        background-color: var(--danger-color);
         form {
             width: 60%;
             margin: 0 auto;
@@ -725,7 +725,7 @@
                     min-width: 50px;
                     min-height: 50px;
                     border-radius: 50%;
-                    background-color: var(--primary-color);
+                    background-color: var(--danger-color);
                 }
             }
         }

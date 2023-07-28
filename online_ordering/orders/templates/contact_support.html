@@ -1,10 +1,155 @@
-{% extends 'base_generic.html' %}
-
+{% extends 'base_pp.html' %}
+{% load static %}
+{% load widget_tweaks %}
 {% block content %}
-<h2>Contact Support</h2>
-<form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Send</button>
-</form>
+<div class="page-content">
+    <div class="container-fluid">
+        <div class="row">       
+            <div class="card col-md-8 col-lg-6 col-xl-8 ">
+                <div class="card-body p-4"> 
+                    <div class="text-center mt-2">
+                        <h5>Contact Support</h5>
+                    </div>
+                    <div class="p-2 mt-4"> 
+                                                      
+                        <form method="post">{% csrf_token %}
+                            <div class="mb-3">
+                                <label class="form-label" for="name">Nom</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.name class='form-control' %}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="subject">Object</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.subject class='form-control' %}
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label" for="message">Message</label>
+                                <div class="position-relative input-custom-icon">
+                            
+                                {% render_field form.message class='form-control' %}
+                                </div>
+                            </div>
+                            <button  class="btn btn-danger w-50 waves-effect waves-light" type="submit">Send</button>                           
+                        </form> 
+                                          
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+    <div class="row">
+        <div class="col-xl-12">
+            <div class="card">
+                <div class="card-body">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-6">
+                            <div class="card-header ">
+                                <h4 class="card-title justify-content-center">Questions fréquement posée, FAQS</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- end row -->
+
+                    <div class="row mt-3">
+                          <div class="col-xl-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-body overflow-hidden position-relative">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+                                                    <i class="bx bx-question-mark"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5 class="font-size-17">Why do we use it?</h5>
+                                            <p class="text-muted mt-2 mb-0">Their separate existence is a myth. For science, music,
+                                                sport, etc, Europe uses the same vocabulary.</p>
+
+                                            <div class="mt-3 pt-1">
+                                                <a href="" class="text-danger fw-semibold"> <u>Read More </u> <i class="mdi mdi-arrow-right ms-1 align-middle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+        
+                        <div class="col-xl-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-body overflow-hidden position-relative">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+                                                    <i class="bx bx-question-mark"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5 class="font-size-17">Where can I get some?</h5>
+                                            <p class="text-muted mt-2 mb-0">The point of using Lorem Ipsum is that it has a 
+                                                more-or-less normal opposed to using content here.</p>
+
+                                            <div class="mt-3 pt-1">
+                                                <a href="" class="text-danger fw-semibold"> <u>Read More </u> <i class="mdi mdi-arrow-right ms-1 align-middle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+        
+                        <div class="col-xl-4 col-sm-6">
+                            <div class="card">
+                                <div class="card-body overflow-hidden position-relative">
+                                    <div class="d-flex">
+                                        <div class="flex-shrink-0">
+                                            <div class="avatar-sm">
+                                                <span class="avatar-title rounded-circle bg-danger text-white font-size-16">
+                                                    <i class="bx bx-question-mark"></i>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex-grow-1 ms-3">
+                                            <h5 class="font-size-17">What is Lorem Ipsum?</h5>
+                                            <p class="text-muted mt-2 mb-0">To an English person, it will seem like simplified English,
+                                                as a skeptical Cambridge friend what Occidental.</p>
+
+                                            <div class="mt-3 pt-1">
+                                                <a href="" class="text-danger fw-semibold"> <u>Read More </u> <i class="mdi mdi-arrow-right ms-1 align-middle"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- end card body -->
+                            </div>
+                            <!-- end card -->
+                        </div>
+                        <!-- end col -->
+                    </div>
+                    <!-- end row -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Row -->
+    
+
+    </div>
+    <!-- container-fluid -->
+</div>
 {% endblock %}

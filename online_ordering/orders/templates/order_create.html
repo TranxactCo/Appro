@@ -1,62 +1,157 @@
-{% extends 'base_generic.html' %}
+{% extends 'base_pp.html' %}
+{% load widget_tweaks %}
 {% load static %}
 {% block content %}
-<!-- Login Re start -->
-<section class="login-reg">
-    <div class="overlay pt-120">
-        <div class="container">
-            <div class="row align-items-center justify-content-center">
-             <!--    <div class="col-xl-6 order-xl-0 order-1">
-                    <div class="sec-img d-rtl">
-                        <img src="{% static 'assets/images/login-reg-bg.png' %}" class="max-un" alt="image">
-                    </div>
-                </div> -->
-                <div class="col-xl-5">
-                    <div class="section-text text-center">
-                        <h5 class="sub-title">Commander</h5>
-                        <h2 class="title">Bienvenue sur ....... </h2>
+<div class="main-container">
+    <div class="page-content">
+        <div class="container-fluid">
+           <div class="row">
+               <div class="row align-items-center ">
+                    <div class="col-xl-6">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title mb-0">Passer vos commandes sur ApproDirect</h4>
+                            </div>
+                            <div class="card-body">
+                                <form method="post">{% csrf_token %}
 
-                      <div class="row">
-                            <div class="col-12">                          
-                                <form method="post">
-                                    <div class="single-input">
-                                        {% csrf_token %}
-                                        {{ form.as_p }}
-                                      </div>
-                                    <button class="cmn-btn w-100" type="submit">commander</button>
-                                </form> 
-                                 
+
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Nom d'utilisateur</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.username class='form-control' %}
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Nom du produit</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.product_name class='form-control' %}
+                                        </div>
+                                    </div>
+                                        <div class="mb-3">
+                                        <label class="form-label" for="username">Numéro de téléphone</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.contact class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                        <div class="mb-3">
+                                        <label class="form-label" for="username">Type de Commande</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.type_order class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                        <div class="mb-3">
+                                        <label class="form-label" for="username">Ville de reception</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.receiver_ville class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                        <div class="mb-3">
+                                        <label class="form-label" for="username">Marque du produit commander</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.marque_order class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                        <div class="mb-3">
+                                        <label class="form-label" for="username">Taille/Mesure du produit(L/kg/etc..)</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.size class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Quantité du produit commander</label>
+                                        <div class="position-relative input-custom-icon">
+                                        {% render_field form.quantity class='form-control' %}
+                                        
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Informations suplémentaires</label>
+                                        <div class="position-relative input-custom-icon">
+                                    
+                                        {% render_field form.infos class='form-control' %}
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-danger w-100 waves-effect waves-light" type="submit">commander</button>
+                                    
+                                    </form>
+                               <!-- <form method="post">{% csrf_token %}
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Nom d'utilisateur</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.username }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Nom du produit</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.product_name }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Numéro de téléphone</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.contact }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Type de Commande</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.type_order }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Ville de reception</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.receiver_ville }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Marque du produit commander</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.marque_order }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Taille/Mesure du produit(L/kg/etc..)</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.size }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Quantité du produit commander</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.quantity }}  
+                                          </div>                                                
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="form-label" for="username">Informations suplémentaires</label>
+                                        <div class="position-relative input-custom-icon">                                               
+                                             {{form.infos }}  
+                                          </div>                                                
+                                    </div>
+                                    
+                                    <button class="btn btn-danger w-100 waves-effect waves-light" type="submit">commander</button>                                                               
+                                
+                                </form>-->
                             </div>
+                            <!-- end card body -->
                         </div>
-                        <!-- <div class="reg-google">
-                            <a href="javascript:void(0)"><i class="fab fa-google"></i>Sign up with Google</a>
-                        </div>
-                        <span class="or">Or Continue With</span> 
+                        <!-- end card -->
                     </div>
-                    <form method="POST">
-                        {% csrf_token %}
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="single-input">
-                                    {{form.username}}
-                                </div>
-                                <div class="single-input">
-                                    {{form.email}}
-                                </div>
-                                <div class="single-input">
-                                    {{form.password1}}
-                                </div>
-                                <div class="single-input">
-                                    {{form.password2}}
-                                </div>
-                                <button class="cmn-btn w-100" type="submit">Inscription</button>
-                            </div>
-                        </div>
-                    </form>-->
-                </div>
-             </div>     
-        </div>
+    <!-- end col -->
+               </div>
+            </div>
+       </div>
     </div>
-</section>
-<!-- Login Reg end -->
+
+</div>
+
 {% endblock %}
